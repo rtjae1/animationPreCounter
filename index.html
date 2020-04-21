@@ -48,7 +48,27 @@
       </div>
       <!-- content -->
       <div class="content">
-        
+        <div class="preloader"><div class="counter">0</div></div>
+        <section>
+          <h2>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam,
+            velit?<span>yo globe!</span>
+          </h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga ullam
+            eligendi praesentium, blanditiis tempora dignissimos voluptas quo
+            vero corporis earum omnis esse in, quia id magni expedita. Ab
+            consectetur fuga labore perferendis rem minima aliquam in. Quasi
+            animi aperiam excepturi, tempora est in laudantium omnis
+            exercitationem aliquid eaque eius praesentium, modi vel saepe dicta.
+            Et distinctio molestias vitae itaque doloremque eveniet, ad, placeat
+            autem consequatur, fugit hic officiis laboriosam. In eaque dicta
+            architecto. Est illo, quibusdam facilis dolorum necessitatibus
+            veritatis dolore et magnam, architecto libero ullam voluptatem.
+            Voluptatem nulla molestiae explicabo alias impedit vel deserunt at
+            hic eius? Optio, veniam?
+          </p>
+        </section>
       </div>
       <!-- links -->
       <div class="links">
@@ -91,5 +111,23 @@
     </div>
     <!-- js for menu -->
     <script src="./assets/js/main.js"></script>
+   <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- js -->
+    <script type="text/javascript">
+      function counter() {
+        var count = setInterval(function () {
+          var c = parseInt($(".counter").text());
+          $(".counter").text((++c).toString());
+          if (c == 100) {
+            clearInterval(count);
+            $(".counter").addClass("hide");
+            $(".preloader").addClass("active");
+          }
+        }, 60);
+      }
+
+      counter();
+    </script>
   </body>
 </html>
